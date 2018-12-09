@@ -2,9 +2,6 @@
 
 namespace App\Src\Model;
 
-use App\Src\Model\HostCollector;
-use App\Src\Model\Request;
-
 class LoadAlgorithm
 {
     private $balanceType;
@@ -28,10 +25,13 @@ class LoadAlgorithm
     public function getFirstBalanceType($hostCollection): void
     {        
         $hosts = $hostCollection->getHosts();
+        /*
+        * view load effect
         foreach($hosts as $host)
         {
             echo $host->handleRequest($this->request).'<br>';
         }
+        */
     }
     
     public function getSecondBalanceType($hostCollection): void
@@ -56,7 +56,11 @@ class LoadAlgorithm
         }
         //if all loads are under 0,75
         if (!$loadOver75) {
+            
+        /*
+        * view load effect
             echo '<label style="color:darkgreen;font-weight: bold;">Low load level: </label><br>';
+        */
             $lowLoadHost->handleRequest($this->request);
         }
     }

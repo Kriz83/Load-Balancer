@@ -18,7 +18,10 @@ for ($i = 0; $i < 6; $i++) {
     $host{$i} = new Host(floatVal('0.'.rand(0, 99)));
     //load host to collector
     $hostCollector->loadHost($host{$i});
+    /*
+    * view list of generated hosts load
     echo $host{$i}->getLoad().'<br>';
+    */
 }
 
 //get Request

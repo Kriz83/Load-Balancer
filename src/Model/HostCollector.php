@@ -2,8 +2,6 @@
 
 namespace App\Src\Model;
 
-use App\Src\Model\Host;
-
 class HostCollector
 {
     private $hostCollection = [];

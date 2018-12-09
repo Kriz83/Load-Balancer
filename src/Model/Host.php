@@ -2,9 +2,6 @@
 
 namespace App\Src\Model;
 
-use App\Src\Model\HostInterface;
-use App\Src\Model\Request;
-
 class Host implements HostInterface
 {
     public function __construct(float $load)
@@ -14,7 +11,10 @@ class Host implements HostInterface
 
     public function handleRequest(Request $request): void
     {
+        /*
+        * view effect only
         echo 'Request Handled by Host. Host balance: '.$this->getLoad();
+        */
     }
 
     public function getLoad(): float

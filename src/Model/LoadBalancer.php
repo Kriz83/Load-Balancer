@@ -2,11 +2,7 @@
 
 namespace App\Src\Model;
 
-use App\Src\Model\HostCollector;
-use App\Src\Model\Request;
-use App\Src\Model\LoadAlgorithm;
-
-class LoadBalancer
+class LoadBalancer implements LoadBalancerInterface
 {
     private $hostCollection;
     private $balanceType;
@@ -17,7 +13,6 @@ class LoadBalancer
         $this->algorithmType = $algorithmType;
         $this->loadAlgorithm = new LoadAlgorithm($algorithmType);
     }
-
     
     public function handleRequest(Request $request): void
     {
